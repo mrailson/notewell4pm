@@ -2377,7 +2377,9 @@ Or upload a context document above to auto-populate this field." style="
                 this.backgroundChunks = []; // Store processed chunks
                 this.currentChunkIndex = 0;
                 this.chunkTimer = null;
+                this.chunkCheckTimer = null; // Timer for smart chunk interval checks
                 this.chunkInterval = 2 * 60 * 1000; // 2 minutes in milliseconds for testing
+                this.overlapDuration = 30 * 1000; // 30s overlap between chunks
                 this.recordingStartTime = null;
                 
                 // Progress tracking
